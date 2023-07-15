@@ -20,7 +20,7 @@ function Restaurent() {
     }
     return (
         <>
-            <NavBar />
+            <NavBar filterItem={filterItem} />
             <MenuCard MenuData={MenuData} />
         </>
     )

@@ -1,24 +1,23 @@
 import React from 'react'
 
-import Menu from './MenuApi'
-const NavBar = () => {
+const NavBar = ({ filterItem }) => {
     return (
         <nav className="navbar">
             <div className="btn-group">
                 <button className="btn-group__item" onClick={() => {
-                    React.filterItem("breakfast")
+                    filterItem("breakfast")
                 }}>Breakfast</button>
                 <button className="btn-group__item" onClick={() => {
-                    React.filterItem("lunch")
+                    filterItem("lunch")
                 }}>Lunch</button>
                 <button className="btn-group__item" onClick={() => {
-                    React.filterItem("evening")
+                    filterItem("evening")
                 }}> Evening</button>
                 <button className="btn-group__item" onClick={() => {
-                    React.filterItem("dinner")
+                    filterItem("dinner")
                 }}> Dinner</button>
                 <button className="btn-group__item" onClick={() =>
-                    React.setmenuData(Menu)} >All</button>
+                    filterItem('All')} >All</button>
             </div>
         </nav>
     )
