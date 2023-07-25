@@ -1,6 +1,7 @@
 import React from 'react'
+import Menu from './MenuApi'
 
-const NavBar = ({ filterItem }) => {
+const NavBar = ({ filterItem, setMenuData }) => {
     return (
         <nav className="navbar">
             <div className="btn-group">
@@ -17,7 +18,7 @@ const NavBar = ({ filterItem }) => {
                     filterItem("dinner")
                 }}> Dinner</button>
                 <button className="btn-group__item" onClick={() =>
-                    filterItem('All')} >All</button>
+                    setMenuData(Menu)} >All</button>
             </div>
         </nav>
     )
